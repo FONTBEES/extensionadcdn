@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 16px;
+  background: #f8f8f8;
+}
+
+.ad-container {
+  width: 420px; /* container width slightly larger for padding */
+  height: 270px; /* height includes padding and image height */
+  background-color: #eee; /* fallback background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* position CTA button at bottom */
+}
+
+.ad-cta {
+  background: rgba(123, 63, 191, 0.85);
+  color: white;
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.ad-cta:hover {
+  background: rgba(90, 46, 141, 0.85);
+}
+
+/* Overlay gradient for better CTA contrast */
+.ad-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  z-index: 1;
+}
+
+/* Put content above overlay */
+.ad-container > * {
+  position: relative;
+  z-index: 2;
+}
