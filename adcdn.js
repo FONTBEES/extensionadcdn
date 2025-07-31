@@ -1,6 +1,6 @@
 const ads = [
   {
-    image: "https://raw.githubusercontent.com/FONTBEES/extensionadcdn/refs/heads/main/ad1.png",
+    image: "https://fontbees.github.io/extensionadcdn/ad1.png",
     cta: "testing Now",
     link: "https://example.com/deal1"
   },
